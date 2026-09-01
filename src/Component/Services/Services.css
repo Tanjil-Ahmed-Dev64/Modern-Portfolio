@@ -1,0 +1,472 @@
+
+/* =========================================
+   SERVICES SECTION
+========================================= */
+
+.service-container {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 100px 8%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #071a26;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.service-header {
+  width: 100%;
+  max-width: 700px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  margin-bottom: 55px;
+}
+
+
+/* Small title */
+
+.service-small-title {
+  margin-bottom: 7px;
+
+  color: rgb(0, 218, 248);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+
+/* Main title */
+
+.service-header h1 {
+  margin: 0;
+
+  display: flex;
+
+  gap: 12px;
+
+  color: white;
+
+  font-size: clamp(38px, 5vw, 52px);
+
+  line-height: 1.1;
+
+  font-weight: 700;
+
+  letter-spacing: -1px;
+}
+
+
+.service-header h1 span {
+  color: rgb(3, 191, 254);
+
+  text-shadow:
+    0 0 15px rgba(3, 191, 254, 0.3);
+}
+
+
+/* Header paragraph */
+
+.service-header p {
+  max-width: 600px;
+
+  margin: 18px 0 0;
+
+  color: rgb(185, 202, 216);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   CARDS CONTAINER
+========================================= */
+
+.services-main {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+
+  max-width: 1100px;
+}
+
+
+/* =========================================
+   SERVICE CARD
+========================================= */
+
+.service-card {
+  min-height: 360px;
+
+  padding: 30px 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  position: relative;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(28, 20, 76, 0.98),
+      rgba(14, 24, 54, 0.98)
+    );
+
+  border: 1px solid rgba(3, 191, 254, 0.18);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 0 15px rgba(4, 162, 253, 0.25);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* Top glow */
+
+.service-card::before {
+  content: "";
+
+  width: 100%;
+  height: 3px;
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgb(0, 218, 248),
+    rgb(248, 3, 236)
+  );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.4s ease;
+}
+
+
+/* Hover */
+
+.service-card:hover {
+  transform: translateY(-10px);
+
+  border-color:
+    rgba(3, 191, 254, 0.6);
+
+  box-shadow:
+    0 15px 40px rgba(4, 162, 253, 0.2);
+}
+
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.code-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  color: rgb(3, 191, 254);
+
+  background: rgba(3, 191, 254, 0.08);
+
+  border: 1px solid rgba(3, 191, 254, 0.3);
+
+  border-radius: 12px;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  box-shadow:
+    0 0 15px rgba(3, 191, 254, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.service-card:hover .code-icon {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 0 20px rgba(3, 191, 254, 0.25);
+}
+
+
+/* =========================================
+   CARD NUMBER
+========================================= */
+
+.card-number {
+  position: absolute;
+
+  top: 25px;
+  right: 25px;
+
+  color: rgba(255, 255, 255, 0.12);
+
+  font-size: 34px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.service-card h2 {
+  margin: 0 0 12px;
+
+  color: white;
+
+  font-size: 21px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.service-card p {
+  margin: 0;
+
+  color: rgb(185, 202, 216);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+
+  flex: 1;
+}
+
+
+/* =========================================
+   LEARN BUTTON
+========================================= */
+
+.learn-btn {
+  min-width: 120px;
+  height: 38px;
+
+  margin-top: 25px;
+
+  padding: 0 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  color: #03141d;
+
+  background: linear-gradient(
+    135deg,
+    rgb(3, 191, 254),
+    rgb(1, 252, 105)
+  );
+
+  border: none;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Arrow */
+
+.learn-btn span {
+  font-size: 16px;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* Hover */
+
+.learn-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 20px rgba(3, 191, 254, 0.3);
+}
+
+
+.learn-btn:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .service-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .services-main {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .service-card:last-child {
+    grid-column: 1 / -1;
+
+    max-width: 400px;
+
+    width: 100%;
+
+    justify-self: center;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .service-container {
+    min-height: auto;
+
+    padding: 90px 25px 70px;
+  }
+
+
+  .service-header {
+    margin-bottom: 40px;
+  }
+
+
+  .service-small-title {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .service-header h1 {
+    font-size: 40px;
+  }
+
+
+  .service-header p {
+    font-size: 13px;
+  }
+
+
+  .services-main {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+
+  .service-card {
+    min-height: 330px;
+
+    padding: 28px 22px;
+  }
+
+
+  .service-card:last-child {
+    max-width: none;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+  .service-container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+
+  .service-header h1 {
+    font-size: 34px;
+  }
+
+
+  .service-card {
+    min-height: 315px;
+  }
+
+
+  .service-card h2 {
+    font-size: 19px;
+  }
+
+
+  .service-card p {
+    font-size: 13px;
+  }
+}
+

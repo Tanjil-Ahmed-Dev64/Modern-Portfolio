@@ -1,0 +1,570 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*MAIN SECTION*/
+
+.skill-container {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 90px 7% 80px;
+
+  background: #071a26;
+
+  color: white;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.skill-title {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-bottom: 70px;
+}
+
+
+.skill-label {
+  color: aqua;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 8px;
+}
+
+
+.skill-title h1 {
+  color: white;
+
+  font-size: clamp(34px, 5vw, 45px);
+
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+
+.skill-title h1 span {
+  color: aqua;
+
+  text-shadow:
+    0 0 15px rgba(0, 255, 255, 0.25);
+}
+
+
+/* =========================================
+   MAIN WRAPPER
+========================================= */
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 80px;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.section-heading {
+  margin-bottom: 35px;
+
+  color: white;
+
+  font-size: 22px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   TECHNICAL SKILLS
+========================================= */
+
+.technical-skills {
+  width: 100%;
+}
+
+
+.technical-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 27px;
+}
+
+
+/* =========================================
+   TECHNICAL SKILL ROW
+========================================= */
+
+.skill-info {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 120px 1fr 45px;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* =========================================
+   SKILL NAME
+========================================= */
+
+.skill-name {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.skill-name h3 {
+  color: #dce7eb;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.skill-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 19px;
+}
+
+
+.html-icon {
+  color: #e44d26;
+}
+
+
+.css-icon {
+  color: #1572b6;
+}
+
+
+.js-icon {
+  color: #f7df1e;
+}
+
+
+.react-icon {
+  color: #61dafb;
+}
+
+
+.python-icon {
+  color: #3776ab;
+}
+
+
+/* =========================================
+   PROGRESS CONTAINER
+========================================= */
+
+.progress-container {
+  width: 100%;
+  height: 7px;
+
+  background: #10181d;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow:
+    inset 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+
+/* =========================================
+   PROGRESS BAR
+========================================= */
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgb(0, 174, 255),
+      aqua
+    );
+
+  box-shadow:
+    0 0 10px rgba(0, 255, 255, 0.55);
+
+  animation:
+    progressGrow 1.8s
+    cubic-bezier(.4, 0, .2, 1)
+    forwards;
+}
+
+
+@keyframes progressGrow {
+
+  from {
+    width: 0;
+  }
+
+  to {
+    width: var(--progress);
+  }
+
+}
+
+
+/* =========================================
+   PERCENTAGE
+========================================= */
+
+.percentage {
+  color: aqua;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-align: right;
+}
+
+
+/* =========================================
+   PROFESSIONAL SKILLS
+========================================= */
+
+.professional-skills {
+  width: 100%;
+}
+
+
+.professional-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(130px, 1fr));
+
+  gap: 35px 25px;
+}
+
+
+/* =========================================
+   PROFESSIONAL ITEM
+========================================= */
+
+.professional-item {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.professional-item h3 {
+  color: #dce7eb;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   CIRCLE
+========================================= */
+
+.circle {
+  width: 110px;
+  height: 110px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================
+   SVG
+========================================= */
+
+.circle-svg {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  transform: rotate(-90deg);
+
+  overflow: visible;
+}
+
+
+.circle-bg,
+.circle-progress {
+  fill: none;
+
+  stroke-width: 6;
+}
+
+
+/* =========================================
+   CIRCLE BACKGROUND
+========================================= */
+
+.circle-bg {
+  stroke: #10181d;
+}
+
+
+/* =========================================
+   CIRCLE PROGRESS
+========================================= */
+
+.circle-progress {
+  stroke: aqua;
+
+  stroke-linecap: round;
+
+  stroke-dasharray: 327;
+
+  stroke-dashoffset: 327;
+
+  animation:
+    circleSnake 1.8s
+    cubic-bezier(.45, 0, .15, 1)
+    forwards;
+
+  filter:
+    drop-shadow(
+      0 0 5px rgba(0, 255, 255, 0.55)
+    );
+}
+
+
+/*
+  327 ≈ circumference of circle
+  Formula:
+  327 - (327 × percentage / 100)
+*/
+
+@keyframes circleSnake {
+
+  from {
+    stroke-dashoffset: 327;
+  }
+
+  to {
+    stroke-dashoffset:
+      calc(
+        327 - (327 * var(--progress) / 100)
+      );
+  }
+
+}
+
+
+/* =========================================
+   CIRCLE PERCENTAGE
+========================================= */
+
+.circle-percentage {
+  position: relative;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .skill-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+
+  .wrapper {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+
+  .technical-skills,
+  .professional-skills {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .skill-container {
+    padding:
+      80px 20px
+      60px;
+  }
+
+
+  .skill-title {
+    margin-bottom: 50px;
+  }
+
+
+  .skill-title h1 {
+    font-size: 34px;
+  }
+
+
+  .section-heading {
+    font-size: 20px;
+
+    text-align: center;
+  }
+
+
+  .skill-info {
+    grid-template-columns:
+      100px 1fr 40px;
+
+    gap: 8px;
+  }
+
+
+  .skill-name {
+    gap: 6px;
+  }
+
+
+  .skill-name h3 {
+    font-size: 12px;
+  }
+
+
+  .skill-icon {
+    font-size: 17px;
+  }
+
+
+  .progress-container {
+    height: 6px;
+  }
+
+
+  .percentage {
+    font-size: 11px;
+  }
+
+
+  .professional-grid {
+    gap: 30px 15px;
+  }
+
+
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .skill-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+  .skill-info {
+    grid-template-columns:
+      85px 1fr 35px;
+  }
+
+
+  .skill-name h3 {
+    font-size: 11px;
+  }
+
+
+  .professional-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+

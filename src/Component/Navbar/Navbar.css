@@ -1,0 +1,424 @@
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar-container {
+  width: 100%;
+  height: 70px;
+
+  padding: 0 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgb(0, 136, 255);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+  width: 100px;
+  height: 40px;
+
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.logo img {
+  width: 100px;
+  height: 30px;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition: 0.3s ease;
+}
+
+.logo:hover img {
+  transform: scale(1.05);
+}
+
+
+/* =========================================
+   NAV MENU
+========================================= */
+
+.nav-menu ul {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+/* =========================================
+   NAV BUTTON
+========================================= */
+
+.nav-menu li button {
+  position: relative;
+
+  padding: 8px 2px;
+
+  color: white;
+
+  background: transparent;
+  border: none;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.nav-menu li button:hover {
+  color: #eaf8ff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   ACTIVE UNDERLINE
+========================================= */
+
+.nav-menu li button::after {
+  content: "";
+
+  width: 0;
+  height: 2px;
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  background: white;
+
+  border-radius: 10px;
+
+  transform: translateX(-50%);
+
+  transition: width 0.3s ease;
+}
+
+.nav-menu li button:hover::after,
+.nav-menu li button.active-link::after {
+  width: 100%;
+}
+
+
+/* =========================================
+   CONNECT BUTTON
+========================================= */
+
+.contact-btn {
+  min-width: 145px;
+  height: 38px;
+
+  padding: 0 15px;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    rgb(249, 1, 216),
+    rgb(2, 218, 247)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px) scale(1.04);
+
+  box-shadow:
+    0 8px 25px rgba(241, 3, 114, 0.3);
+}
+
+.contact-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.menu-btn {
+  width: 40px;
+  height: 40px;
+
+  padding: 7px;
+
+  display: none;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+.menu-btn span {
+  width: 25px;
+  height: 2px;
+
+  display: block;
+
+  background: white;
+
+  border-radius: 10px;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+/* =========================================
+   HAMBURGER → X
+========================================= */
+
+.menu-btn.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .navbar-container {
+    padding: 0 25px;
+  }
+
+  .nav-menu ul {
+    gap: 18px;
+  }
+
+  .nav-menu li button {
+    font-size: 14px;
+  }
+
+  .contact-btn {
+    min-width: 130px;
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .navbar-container {
+    height: 60px;
+
+    padding: 0 20px;
+  }
+
+
+  /* Logo */
+
+  .logo {
+    width: 80px;
+  }
+
+  .logo img {
+    width: 80px;
+    height: auto;
+  }
+
+
+  /* Hide desktop button */
+
+  .contact-btn {
+    display: none;
+  }
+
+
+  /* Show hamburger */
+
+  .menu-btn {
+    display: flex;
+  }
+
+
+  /* Mobile menu */
+
+  .nav-menu {
+    width: 100%;
+
+    position: absolute;
+
+    top: 60px;
+    left: 0;
+
+    padding: 0 20px;
+
+    background: rgb(0, 136, 255);
+
+    overflow: hidden;
+
+    max-height: 0;
+
+    opacity: 0;
+
+    transform: translateY(-10px);
+
+    pointer-events: none;
+
+    transition:
+      max-height 0.4s ease,
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+
+
+  /* Open menu */
+
+  .nav-menu.active {
+    max-height: 450px;
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+
+
+  /* Mobile list */
+
+  .nav-menu ul {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 5px;
+  }
+
+
+  /* Mobile buttons */
+
+  .nav-menu li button {
+    width: 100%;
+
+    padding: 12px 10px;
+
+    text-align: center;
+
+    font-size: 16px;
+  }
+
+
+  /* Remove underline animation on mobile */
+
+  .nav-menu li button::after {
+    bottom: 5px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .navbar-container {
+    padding: 0 15px;
+  }
+
+  .logo img {
+    width: 75px;
+  }
+
+  .nav-menu li button {
+    font-size: 15px;
+  }
+}
+
