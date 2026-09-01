@@ -1,68 +1,45 @@
-
-
-/* =========================================
-   RESET
-========================================= */
+/*RESET*/
 
 * {
   box-sizing: border-box;
 }
 
-
-/* =========================================
-   NAVBAR
-========================================= */
+/*NAVBAR*/
 
 .navbar-container {
   width: 100%;
   height: 70px;
-
   padding: 0 45px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   background: rgb(0, 136, 255);
-
   position: fixed;
   top: 0;
   left: 0;
-
   z-index: 1000;
-
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
-
-/* =========================================
-   LOGO
-========================================= */
+/*LOGO*/
 
 .logo {
   width: 100px;
   height: 40px;
-
   padding: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: transparent;
   border: none;
-
   cursor: pointer;
 }
 
 .logo img {
   width: 100px;
   height: 30px;
-
   display: block;
-
   object-fit: contain;
-
   transition: 0.3s ease;
 }
 
@@ -71,80 +48,55 @@
 }
 
 
-/* =========================================
-   NAV MENU
-========================================= */
+/*NAV MENU*/
 
 .nav-menu ul {
   display: flex;
   align-items: center;
-
   gap: 28px;
-
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
 
-/* =========================================
-   NAV BUTTON
-========================================= */
+/*NAV BUTTON */
 
 .nav-menu li button {
   position: relative;
-
   padding: 8px 2px;
-
   color: white;
-
   background: transparent;
   border: none;
-
   font-size: 16px;
   font-weight: 500;
-
   cursor: pointer;
-
   transition:
     color 0.25s ease,
     transform 0.25s ease;
 }
 
 
-/* =========================================
-   HOVER
-========================================= */
+/*HOVER*/
 
 .nav-menu li button:hover {
   color: #eaf8ff;
-
   transform: translateY(-2px);
 }
 
 
-/* =========================================
-   ACTIVE UNDERLINE
-========================================= */
+/* ACTIVE UNDERLINE*/
 
 .nav-menu li button::after {
   content: "";
-
   width: 0;
   height: 2px;
-
   position: absolute;
-
   left: 50%;
   bottom: 0;
-
   background: white;
-
   border-radius: 10px;
-
   transform: translateX(-50%);
-
   transition: width 0.3s ease;
 }
 
@@ -154,18 +106,13 @@
 }
 
 
-/* =========================================
-   CONNECT BUTTON
-========================================= */
+/*CONNECT BUTTON*/
 
 .contact-btn {
   min-width: 145px;
   height: 38px;
-
   padding: 0 15px;
-
   color: white;
-
   background: linear-gradient(
     135deg,
     rgb(249, 1, 216),
@@ -173,14 +120,10 @@
   );
 
   border: 1px solid rgba(255, 255, 255, 0.4);
-
   border-radius: 12px;
-
   font-size: 14px;
   font-weight: 600;
-
   cursor: pointer;
-
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
@@ -188,60 +131,43 @@
 
 .contact-btn:hover {
   transform: translateY(-3px) scale(1.04);
-
   box-shadow:
     0 8px 25px rgba(241, 3, 114, 0.3);
 }
-
 .contact-btn:active {
   transform: translateY(0) scale(0.98);
 }
 
 
-/* =========================================
-   MOBILE MENU BUTTON
-========================================= */
+/* MOBILE MENU BUTTON */
 
 .menu-btn {
   width: 40px;
   height: 40px;
-
   padding: 7px;
-
   display: none;
-
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   gap: 5px;
-
   background: transparent;
-
   border: none;
-
   cursor: pointer;
 }
 
 .menu-btn span {
   width: 25px;
   height: 2px;
-
   display: block;
-
   background: white;
-
   border-radius: 10px;
-
   transition:
     transform 0.3s ease,
     opacity 0.3s ease;
 }
 
 
-/* =========================================
-   HAMBURGER → X
-========================================= */
+/*HAMBURGER → X*/
 
 .menu-btn.open span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
@@ -256,12 +182,9 @@
 }
 
 
-/* =========================================
-   TABLET
-========================================= */
+/*TABLET*/
 
 @media (max-width: 950px) {
-
   .navbar-container {
     padding: 0 25px;
   }
@@ -281,18 +204,13 @@
 }
 
 
-/* =========================================
-   MOBILE
-========================================= */
+/*MOBILE*/
 
 @media (max-width: 768px) {
-
   .navbar-container {
     height: 60px;
-
     padding: 0 20px;
   }
-
 
   /* Logo */
 
@@ -304,7 +222,6 @@
     width: 80px;
     height: auto;
   }
-
 
   /* Hide desktop button */
 
@@ -403,12 +320,9 @@
 }
 
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+/*SMALL MOBILE*/
 
 @media (max-width: 400px) {
-
   .navbar-container {
     padding: 0 15px;
   }

@@ -55,10 +55,6 @@ function LatestProject() {
   return (
     <section className="latest-project" id="work">
 
-      {/* =========================
-          HEADER
-      ========================= */}
-
       <div className="latest-header">
 
         <div className="latest-title">
@@ -76,11 +72,6 @@ function LatestProject() {
           </p>
 
         </div>
-
-
-        {/* =========================
-            FILTER
-        ========================= */}
 
         <div className="project-filter">
 
@@ -102,37 +93,22 @@ function LatestProject() {
 
       </div>
 
-
-      {/* =========================
-          PROJECT GRID
-      ========================= */}
-
       <div className="projects-grid">
-
         {filteredProjects.map((project) => (
-
           <article
             className="project-card"
             key={project.id}
           >
-
             <img
               src={project.image}
               alt={project.title}
               loading="lazy"
             />
 
-
-            {/* =========================
-                OVERLAY
-            ========================= */}
-
             <div className="project-overlay">
-
               <span>
                 {project.category}
               </span>
-
               <h2>
                 {project.title}
               </h2>
@@ -140,11 +116,6 @@ function LatestProject() {
               <p>
                 {project.description}
               </p>
-
-
-              {/* =========================
-                  VIEW PROJECT
-              ========================= */}
 
               <a
                 href={project.link}
@@ -157,9 +128,6 @@ function LatestProject() {
               </a>
 
             </div>
-
-
-            {/* PROJECT NUMBER */}
 
             <span className="project-number">
               {project.id}

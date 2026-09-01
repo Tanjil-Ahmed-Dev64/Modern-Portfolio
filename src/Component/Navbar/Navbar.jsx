@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
@@ -7,9 +6,6 @@ function Navbar() {
   const [menu, setMenu] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
 
-  // =========================
-  // SCROLL TO SECTION
-  // =========================
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
 
@@ -20,13 +16,9 @@ function Navbar() {
       block: "start",
     });
 
-    // Close mobile menu
     setMenu(false);
   };
 
-  // =========================
-  // DETECT ACTIVE SECTION
-  // =========================
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
 
@@ -52,9 +44,6 @@ function Navbar() {
     };
   }, []);
 
-  // =========================
-  // CLOSE MENU WHEN RESIZING
-  // =========================
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -72,9 +61,6 @@ function Navbar() {
   return (
     <nav className="navbar-container">
 
-      {/* =========================
-          LOGO
-      ========================= */}
       <button
         className="logo"
         onClick={() => scrollToSection("hero")}
@@ -83,10 +69,6 @@ function Navbar() {
         <img src={logo} alt="Portfolio logo" />
       </button>
 
-
-      {/* =========================
-          NAVIGATION
-      ========================= */}
       <div className={`nav-menu ${menu ? "active" : ""}`}>
 
         <ul>
@@ -149,9 +131,6 @@ function Navbar() {
       </div>
 
 
-      {/* =========================
-          CONNECT BUTTON
-      ========================= */}
       <button
         className="contact-btn"
         onClick={() => scrollToSection("footer")}
@@ -160,9 +139,6 @@ function Navbar() {
       </button>
 
 
-      {/* =========================
-          MOBILE MENU BUTTON
-      ========================= */}
       <button
         className={`menu-btn ${menu ? "open" : ""}`}
         onClick={() => setMenu((prev) => !prev)}

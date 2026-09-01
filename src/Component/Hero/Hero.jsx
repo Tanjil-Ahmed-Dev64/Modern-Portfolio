@@ -12,9 +12,6 @@ import profile from "../../assets/profile.jpg";
 
 function Hero() {
 
-  // =========================
-  // SCROLL TO ABOUT SECTION
-  // =========================
   const scrollToAbout = () => {
     const aboutSection = document.getElementById("about");
 
@@ -28,10 +25,6 @@ function Hero() {
 
   return (
     <section className="hero-container" id="hero">
-
-      {/* =========================
-          LEFT CONTENT
-      ========================= */}
       <div className="hero-left">
 
         <div className="hero-content">
@@ -58,10 +51,6 @@ function Hero() {
 
         </div>
 
-
-        {/* =========================
-            SOCIAL ICONS
-        ========================= */}
         <div className="social-icons">
 
           <a
@@ -98,10 +87,6 @@ function Hero() {
 
         </div>
 
-
-        {/* =========================
-            ABOUT BUTTON
-        ========================= */}
         <button
           className="about-btn"
           onClick={scrollToAbout}
@@ -111,10 +96,6 @@ function Hero() {
 
       </div>
 
-
-      {/* =========================
-          RIGHT IMAGE
-      ========================= */}
       <div className="hero-right">
 
         <div className="profile-wrapper">

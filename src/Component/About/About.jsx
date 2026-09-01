@@ -19,10 +19,6 @@ function About() {
   return (
     <section className="about-container" id="about">
 
-      {/* =========================
-          IMAGE
-      ========================= */}
-
       <div className="about-image">
 
         <div className="about-image-glow"></div>
@@ -36,10 +32,6 @@ function About() {
 
       </div>
 
-
-      {/* =========================
-          CONTENT
-      ========================= */}
 
       <div className="about-para">
 
@@ -72,11 +64,6 @@ function About() {
           brand identity to create solutions that are both
           technically refined and strategically effective.
         </p>
-
-
-        {/* =========================
-            BUTTON
-        ========================= */}
 
         <button
           className="about-btn"

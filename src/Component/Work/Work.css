@@ -3,46 +3,31 @@
   box-sizing: border-box;
 }
 
-
-/* =========================================
-   MAIN SECTION
-========================================= */
-
+/* MAIN SECTION*/
 .latest-project {
   width: 100%;
   min-height: 100vh;
-
   padding: 100px 7% 80px;
-
   background: #061a25;
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-
   overflow: hidden;
 }
 
 
-/* =========================================
-   HEADER
-========================================= */
+/*HEADER*/
 
 .latest-header {
   width: 100%;
   max-width: 1250px;
-
   margin: 0 auto 50px;
-
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-
   gap: 35px;
 }
 
 
-/* =========================================
-   TITLE
-========================================= */
+/*TITLE */
 
 .latest-title {
   display: flex;
@@ -50,33 +35,23 @@
   align-items: flex-start;
 }
 
-
 .section-label {
   color: #00d9ff;
-
   font-size: 11px;
   font-weight: 700;
-
   letter-spacing: 2px;
 }
 
-
 .latest-header h1 {
   margin: 8px 0;
-
   color: white;
-
   font-size: clamp(36px, 5vw, 45px);
-
   line-height: 1.1;
-
   font-weight: 700;
 }
 
-
 .latest-header h1 span {
   color: #00d9ff;
-
   text-shadow:
     0 0 15px rgba(0, 217, 255, 0.2);
 }
@@ -84,56 +59,34 @@
 
 .latest-header p {
   margin: 0;
-
   color: #8498a1;
-
   font-size: 14px;
-
   line-height: 1.6;
 }
 
-
-/* =========================================
-   FILTER
-========================================= */
-
+/*FILTER*/
 .project-filter {
   display: flex;
   align-items: center;
-
   gap: 5px;
-
   padding: 5px;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
-
   border-radius: 30px;
-
   background: rgba(255, 255, 255, 0.025);
-
   flex-shrink: 0;
 }
-
 
 .project-filter button {
   border: none;
   outline: none;
-
   padding: 9px 15px;
-
   border-radius: 20px;
-
   background: transparent;
-
   color: #8b9da5;
-
   font-size: 12px;
   font-weight: 500;
-
   cursor: pointer;
-
   white-space: nowrap;
-
   transition:
     color 0.3s ease,
     background 0.3s ease,
@@ -143,64 +96,42 @@
 
 .project-filter button:hover {
   color: white;
-
   transform: translateY(-1px);
 }
 
 
 .project-filter button.active {
   background: #00d9ff;
-
   color: #061a25;
-
   font-weight: 600;
-
   box-shadow:
     0 0 15px rgba(0, 217, 255, 0.2);
 }
 
 
-/* =========================================
-   PROJECT GRID
-========================================= */
-
+/*PROJECT GRID */
 .projects-grid {
   width: 100%;
   max-width: 1250px;
-
   margin: 0 auto;
-
   display: grid;
-
   grid-template-columns:
     repeat(3, minmax(0, 1fr));
-
   gap: 25px;
 }
 
 
-/* =========================================
-   PROJECT CARD
-========================================= */
-
+/*PROJECT CARD*/
 .project-card {
   height: 270px;
-
   position: relative;
-
   overflow: hidden;
-
   border-radius: 14px;
-
   background: #102b38;
-
   border: 1px solid rgba(0, 217, 255, 0.1);
-
   cursor: pointer;
-
   box-shadow:
     0 8px 25px rgba(0, 0, 0, 0.2);
-
   transition:
     transform 0.35s ease,
     border-color 0.35s ease,
@@ -210,191 +141,124 @@
 
 .project-card:hover {
   transform: translateY(-7px);
-
   border-color:
     rgba(0, 217, 255, 0.45);
-
   box-shadow:
     0 15px 35px rgba(0, 217, 255, 0.12);
 }
 
 
-/* =========================================
-   PROJECT IMAGE
-========================================= */
-
+/*PROJECT IMAGE*/
 .project-card img {
   width: 100%;
   height: 100%;
-
   display: block;
-
   object-fit: cover;
-
   transition:
     transform 0.6s ease,
     filter 0.4s ease;
 }
 
-
 .project-card:hover img {
   transform: scale(1.08);
-
   filter: brightness(0.65);
 }
 
 
-/* =========================================
-   PROJECT NUMBER
-========================================= */
-
+/*PROJECT NUMBER*/
 .project-number {
   position: absolute;
-
   top: 15px;
   right: 18px;
-
   color: rgba(255, 255, 255, 0.75);
-
   font-size: 13px;
   font-weight: 700;
-
   letter-spacing: 1px;
-
   z-index: 2;
-
   transition:
     opacity 0.3s ease;
 }
-
 
 .project-card:hover .project-number {
   opacity: 0;
 }
 
 
-/* =========================================
-   OVERLAY
-========================================= */
-
+/*OVERLAY*/
 .project-overlay {
   position: absolute;
-
   inset: 0;
-
   padding: 25px;
-
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
-
   text-align: center;
-
   background:
     linear-gradient(
       145deg,
       rgba(3, 20, 29, 0.94),
       rgba(5, 33, 46, 0.88)
     );
-
   opacity: 0;
-
   transform: translateY(20px);
-
   transition:
     opacity 0.4s ease,
     transform 0.4s ease;
 }
 
-
 .project-card:hover .project-overlay {
   opacity: 1;
-
   transform: translateY(0);
 }
 
 
-/* =========================================
-   CATEGORY
-========================================= */
-
+/* CATEGORY*/
 .project-overlay > span {
   margin-bottom: 8px;
-
   color: #00d9ff;
-
   font-size: 10px;
   font-weight: 700;
-
   text-transform: uppercase;
-
   letter-spacing: 2px;
 }
 
 
-/* =========================================
-   TITLE
-========================================= */
-
+/*TITLE*/
 .project-overlay h2 {
   margin: 0 0 10px;
-
   color: white;
-
   font-size: 22px;
-
   font-weight: 600;
 }
 
 
-/* =========================================
-   DESCRIPTION
-========================================= */
-
+/*DESCRIPTION*/
 .project-overlay p {
   max-width: 310px;
-
   margin: 0 0 20px;
-
   color: #b8c5ca;
-
   font-size: 13px;
-
   line-height: 1.6;
 }
 
 
-/* =========================================
-   VIEW PROJECT
-========================================= */
-
+/*VIEW PROJECT*/
 .view-project {
   min-width: 125px;
   height: 37px;
-
   padding: 0 15px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 8px;
-
   border: 1px solid #00d9ff;
-
   border-radius: 20px;
-
   background: transparent;
-
   color: #00d9ff;
-
   font-size: 12px;
   font-weight: 600;
-
   text-decoration: none;
-
   transition:
     background 0.3s ease,
     color 0.3s ease,
@@ -402,58 +266,40 @@
     box-shadow 0.3s ease;
 }
 
-
 .view-project span {
   font-size: 16px;
-
   transition:
     transform 0.3s ease;
 }
 
-
 .view-project:hover {
   background: #00d9ff;
-
   color: #061a25;
-
   transform: translateY(-2px);
-
   box-shadow:
     0 6px 18px rgba(0, 217, 255, 0.25);
 }
-
 
 .view-project:hover span {
   transform: translateX(4px);
 }
 
-
-/* =========================================
-   TABLET
-========================================= */
-
+/*TABLET*/
 @media (max-width: 950px) {
-
   .latest-header {
     align-items: flex-start;
-
     flex-direction: column;
   }
 
-
   .project-filter {
     max-width: 100%;
-
     overflow-x: auto;
-
     scrollbar-width: none;
   }
-
 
   .project-filter::-webkit-scrollbar {
     display: none;
   }
-
 
   .projects-grid {
     grid-template-columns:
@@ -461,97 +307,71 @@
   }
 }
 
-
-/* =========================================
-   MOBILE
-========================================= */
+/*MOBILE*/
 
 @media (max-width: 600px) {
-
   .latest-project {
     min-height: auto;
-
     padding: 85px 5% 60px;
   }
 
-
   .latest-header {
     margin-bottom: 35px;
-
     gap: 25px;
   }
-
 
   .latest-header h1 {
     font-size: 36px;
   }
 
-
   .latest-header p {
     font-size: 13px;
   }
 
-
   .project-filter {
     width: 100%;
-
     justify-content: flex-start;
   }
-
 
   .project-filter button {
     padding: 8px 13px;
   }
 
-
   .projects-grid {
     grid-template-columns: 1fr;
-
     gap: 20px;
   }
-
 
   .project-card {
     height: 240px;
   }
 }
 
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
+/*SMALL MOBILE*/
 @media (max-width: 420px) {
-
   .latest-project {
     padding-left: 18px;
     padding-right: 18px;
   }
 
-
   .latest-header h1 {
     font-size: 33px;
   }
-
 
   .project-card {
     height: 225px;
   }
 
-
   .project-overlay {
     padding: 20px;
   }
-
 
   .project-overlay h2 {
     font-size: 19px;
   }
 
-
   .project-overlay p {
     font-size: 12px;
-
     max-width: 270px;
   }
 }

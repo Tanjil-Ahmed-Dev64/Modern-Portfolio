@@ -28,20 +28,13 @@ function Service() {
   return (
     <section className="service-container" id="service">
 
-      {/* =========================
-          SECTION HEADER
-      ========================= */}
-
       <div className="service-header">
-
         <span className="service-small-title">
           WHAT I DO
         </span>
-
         <h1>
           My <span>Services</span>
         </h1>
-
         <p>
           I provide modern web solutions designed to create
           engaging, responsive, and user-friendly digital experiences.
@@ -50,14 +43,9 @@ function Service() {
       </div>
 
 
-      {/* =========================
-          SERVICE CARDS
-      ========================= */}
-
       <div className="services-main">
 
         {services.map((service, index) => (
-
           <article
             className="service-card"
             key={index}

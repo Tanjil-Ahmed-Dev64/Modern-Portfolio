@@ -61,10 +61,6 @@ function Skills() {
   return (
     <section className="skill-container" id="skills">
 
-      {/* =================================
-          TITLE
-      ================================= */}
-
       <div className="skill-title">
         <span className="skill-label">MY EXPERTISE</span>
 
@@ -73,16 +69,7 @@ function Skills() {
         </h1>
       </div>
 
-
-      {/* =================================
-          MAIN WRAPPER
-      ================================= */}
-
       <div className="wrapper">
-
-        {/* =================================
-            TECHNICAL SKILLS
-        ================================= */}
 
         <div className="technical-skills">
 
@@ -91,68 +78,41 @@ function Skills() {
           </h2>
 
           <div className="technical-list">
-
             {technicalSkills.map((skill) => (
-
               <div className="skill-info" key={skill.name}>
-
                 <div className="skill-name">
-
                   <span className={`skill-icon ${skill.className}`}>
                     {skill.icon}
                   </span>
-
                   <h3>
                     {skill.name}
                   </h3>
-
                 </div>
-
-
                 <div className="progress-container">
-
                   <div
                     className="progress-bar"
                     style={{
                       "--progress": `${skill.percentage}%`,
                     }}
                   />
-
                 </div>
-
-
                 <span className="percentage">
                   {skill.percentage}%
                 </span>
-
               </div>
-
             ))}
-
           </div>
-
         </div>
-
-
-        {/* =================================
-            PROFESSIONAL SKILLS
-        ================================= */}
-
         <div className="professional-skills">
-
           <h2 className="section-heading">
             Professional Skills
           </h2>
-
           <div className="professional-grid">
-
             {professionalSkills.map((skill) => (
-
               <div
                 className="professional-item"
                 key={skill.name}
               >
-
                 <div className="circle">
 
                   <svg

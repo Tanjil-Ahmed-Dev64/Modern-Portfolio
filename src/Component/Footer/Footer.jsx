@@ -7,8 +7,8 @@ import {
   FaWhatsapp,
   FaLinkedinIn,
 } from "react-icons/fa";
-
 import emailjs from "@emailjs/browser";
+
 
 function Footer() {
   const form = useRef();
@@ -54,10 +54,6 @@ function Footer() {
   return (
     <footer className="footer-container" id="contact">
 
-      {/* =================================
-          LEFT SIDE
-      ================================= */}
-
       <div className="footer-left">
 
         <span className="footer-label">
@@ -80,11 +76,6 @@ function Footer() {
             discussing new projects, creative ideas, and
             opportunities.
           </p>
-
-
-          {/* =================================
-              SOCIAL ICONS
-          ================================= */}
 
           <div className="social-icons">
 
@@ -134,11 +125,6 @@ function Footer() {
 
       </div>
 
-
-      {/* =================================
-          RIGHT SIDE / CONTACT FORM
-      ================================= */}
-
       <div className="footer-right">
 
         <form
@@ -184,11 +170,6 @@ function Footer() {
 
           </div>
 
-
-          {/* =================================
-              SUBMIT BUTTON
-          ================================= */}
-
           <button
             className="submit-btn"
             type="submit"
@@ -198,9 +179,6 @@ function Footer() {
           </button>
 
 
-          {/* =================================
-              STATUS
-          ================================= */}
 
           {status && (
             <p
@@ -215,9 +193,7 @@ function Footer() {
           )}
 
         </form>
-
       </div>
-
     </footer>
   );
 }

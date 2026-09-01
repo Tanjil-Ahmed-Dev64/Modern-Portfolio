@@ -1,51 +1,33 @@
 
-/* =========================================
-   HERO SECTION
-========================================= */
+/*HERO SECTION*/
 
 .hero-container {
   width: 100%;
   min-height: 100vh;
-
   padding: 100px 8% 60px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 100px;
-
   background: #071a26;
-
   color: white;
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-
   overflow: hidden;
-
   position: relative;
 }
 
-
-/* =========================================
-   LEFT SIDE
-========================================= */
-
+/*LEFT SIDE */
 .hero-left {
   width: 100%;
   max-width: 570px;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   z-index: 2;
 }
 
 
-/* =========================================
-   CONTENT
-========================================= */
+/*CONTENT */
 
 .hero-content {
   display: flex;
@@ -53,117 +35,80 @@
   align-items: flex-start;
 }
 
-
 /* Greeting */
 
 .hero-greeting {
   margin: 0 0 6px;
   padding-left: 5px;
-
   color: rgb(211, 201, 201);
-
   font-size: 17px;
   font-weight: 500;
-
   letter-spacing: 0.5px;
 }
 
 
 /* Name */
-
 .hero-name {
   margin: 0;
-
   font-size: clamp(40px, 5vw, 58px);
   line-height: 1.1;
-
   font-weight: 700;
-
   color: white;
-
   letter-spacing: -1px;
 }
 
 
 /* Role */
-
 .hero-role {
   margin: 10px 0 20px;
   padding-left: 5px;
-
   color: rgb(211, 201, 201);
-
   font-size: 22px;
   font-weight: 500;
 }
 
 .hero-role span {
   color: rgb(0, 218, 248);
-
   font-weight: 600;
-
   text-shadow:
     0 0 10px rgba(0, 218, 248, 0.35);
 }
 
 
-/* =========================================
-   DESCRIPTION
-========================================= */
-
+/*DESCRIPTION */
 .hero-description {
   max-width: 540px;
-
   margin: 0;
-
   color: rgba(255, 255, 255, 0.78);
-
   font-size: 15px;
   font-weight: 400;
-
   line-height: 1.8;
-
   letter-spacing: 0.2px;
 }
 
 
-/* =========================================
-   SOCIAL ICONS
-========================================= */
-
+/*SOCIAL ICONS */
 .social-icons {
   display: flex;
   align-items: center;
-
   gap: 16px;
-
   margin-top: 30px;
   margin-bottom: 28px;
 }
 
-
 /* Social Button */
-
 .social-btn {
   width: 38px;
   height: 38px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   color: rgb(0, 218, 248);
-
   background: rgba(0, 218, 248, 0.04);
-
   border: 1px solid rgb(0, 248, 244);
-
   border-radius: 50%;
-
   text-decoration: none;
-
   font-size: 17px;
-
   transition:
     transform 0.3s ease,
     color 0.3s ease,
@@ -176,31 +121,21 @@
 
 .social-btn:hover {
   color: white;
-
   background: rgba(0, 218, 248, 0.12);
-
   transform: translateY(-5px);
-
   box-shadow:
     0 8px 22px rgba(0, 218, 248, 0.35);
 }
 
 
-/* =========================================
-   ABOUT BUTTON
-========================================= */
-
+/*ABOUT BUTTON*/
 .about-btn {
   min-width: 145px;
   height: 42px;
-
   padding: 0 20px;
-
   border: none;
   outline: none;
-
   color: #03141d;
-
   background: linear-gradient(
     135deg,
     rgb(0, 218, 248),
@@ -208,12 +143,9 @@
   );
 
   border-radius: 20px;
-
   font-size: 14px;
   font-weight: 600;
-
   cursor: pointer;
-
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -221,66 +153,48 @@
 
 
 /* Button Hover */
-
 .about-btn:hover {
   transform: translateY(-4px) scale(1.04);
-
   box-shadow:
     0 8px 25px rgba(0, 218, 248, 0.35);
 }
 
 
 /* Button Active */
-
 .about-btn:active {
   transform: translateY(-1px) scale(0.98);
 }
 
 
-/* =========================================
-   RIGHT SIDE
-========================================= */
-
+/*RIGHT SIDE*/
 .hero-right {
   width: 100%;
   max-width: 360px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   z-index: 2;
 }
 
 
-/* =========================================
-   PROFILE WRAPPER
-========================================= */
+/*PROFILE WRAPPER */
 
 .profile-wrapper {
   width: 280px;
   height: 280px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   position: relative;
 }
 
 
-/* =========================================
-   OUTER GLOW
-========================================= */
-
+/* OUTER GLOW*/
 .profile-glow {
   position: absolute;
-
   width: 280px;
   height: 280px;
-
   border-radius: 50%;
-
   background: linear-gradient(
     135deg,
     rgb(0, 218, 248),
@@ -288,31 +202,22 @@
   );
 
   filter: blur(35px);
-
   opacity: 0.3;
-
   animation: glowPulse 4s ease-in-out infinite;
 }
 
 
-/* =========================================
-   IMAGE
-========================================= */
+/*IMAGE*/
 
 .main-image {
   width: 280px;
   height: 280px;
-
   padding: 5px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   position: relative;
-
   border-radius: 50%;
-
   background: linear-gradient(
     135deg,
     rgb(0, 218, 248),
@@ -322,7 +227,6 @@
   box-shadow:
     0 0 35px rgba(0, 218, 248, 0.5),
     0 0 55px rgba(248, 3, 236, 0.3);
-
   animation: profileFloat 4s ease-in-out infinite;
 }
 
@@ -332,20 +236,14 @@
 .main-image img {
   width: 100%;
   height: 100%;
-
   display: block;
-
   border-radius: 50%;
-
   object-fit: cover;
-
   border: 5px solid #071a26;
 }
 
 
-/* =========================================
-   ANIMATIONS
-========================================= */
+/*ANIMATIONS*/
 
 @keyframes profileFloat {
 
@@ -359,13 +257,10 @@
   }
 }
 
-
 @keyframes glowPulse {
-
   0%,
   100% {
     transform: scale(0.95);
-
     opacity: 0.25;
   }
 
@@ -376,16 +271,11 @@
   }
 }
 
-
-/* =========================================
-   TABLET
-========================================= */
+/*TABLET */
 
 @media (max-width: 950px) {
-
   .hero-container {
     gap: 50px;
-
     padding-left: 5%;
     padding-right: 5%;
   }
@@ -411,21 +301,14 @@
 }
 
 
-/* =========================================
-   MOBILE
-========================================= */
-
+/* MOBILE*/
 @media (max-width: 768px) {
 
   .hero-container {
     min-height: 100vh;
-
     padding: 110px 25px 60px;
-
     flex-direction: column;
-
     gap: 55px;
-
     text-align: center;
   }
 
@@ -434,22 +317,17 @@
 
   .hero-left {
     max-width: 600px;
-
     align-items: center;
   }
-
 
   .hero-content {
     align-items: center;
   }
 
-
   .hero-greeting {
     padding-left: 0;
-
     font-size: 15px;
   }
-
 
   .hero-name {
     font-size: 42px;
@@ -458,16 +336,13 @@
 
   .hero-role {
     padding-left: 0;
-
     font-size: 19px;
   }
 
 
   .hero-description {
     max-width: 500px;
-
     font-size: 14px;
-
     line-height: 1.7;
   }
 
@@ -505,9 +380,7 @@
 }
 
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+/*SMALL MOBILE*/
 
 @media (max-width: 420px) {
 
